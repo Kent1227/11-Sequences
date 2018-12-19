@@ -14,8 +14,8 @@ is different from:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Kent Smith.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -49,12 +49,12 @@ def main():
     #        RE-commenting out the previous test if you wish.
     # -------------------------------------------------------------------------
 
-    run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
-                                      sequence4)
+    # run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
+    #                                   sequence4)
     # run_test_print_all_items_backwards(sequence1, sequence2, sequence3,
     #                                    sequence4)
-    # run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3,
-    #                                     sequence4)
+    run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3,
+                                        sequence4)
     # run_test_print_items_in_second_half(sequence1, sequence2, sequence3,
     #                                     sequence4)
     # run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
@@ -353,7 +353,7 @@ def run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3,
 
 
 ###############################################################################
-# Iterating through the ENTIRE sequence, FORWARDs.
+# Iterating through the ENTIRE sequence, FORWARD.
 ###############################################################################
 def print_all_items_forwards(sequence):
     """
@@ -368,13 +368,15 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    for k in range(len(sequence)):
+        print(sequence[k])
 
 
 ###############################################################################
-# Iterating through the ENTIRE sequence, BACKWARDs.
+# Iterating through the ENTIRE sequence, BACKWARD.
 ###############################################################################
 def print_all_items_backwards(sequence):
     """
@@ -390,9 +392,11 @@ def print_all_items_backwards(sequence):
        55
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    for k in range(len(sequence) - 1, -1, -1):
+        print(sequence[k])
 
 
 ###############################################################################
@@ -412,9 +416,11 @@ def print_items_at_odd_indices(sequence):
       33 is at index 5
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    for k in range(1, len(sequence), 2):
+        print(sequence[k], 'is at index', k)
 
 
 ###############################################################################
